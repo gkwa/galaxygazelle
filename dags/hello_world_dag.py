@@ -4,13 +4,7 @@ import airflow.providers.standard.operators.bash
 import airflow.providers.standard.operators.python
 
 default_args = {
-    "owner": "airflow",
-    "depends_on_past": False,
     "start_date": datetime.datetime(2024, 1, 1),
-    "email_on_failure": False,
-    "email_on_retry": False,
-    "retries": 1,
-    "retry_delay": datetime.timedelta(minutes=5),
 }
 
 dag = airflow.DAG(
